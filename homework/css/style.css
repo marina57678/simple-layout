@@ -1,0 +1,275 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2) format("woff2");
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+body a {
+  text-decoration: none;
+}
+body hr {
+  width: 95%;
+  margin: 0 auto;
+  color: #9E9E9E;
+}
+
+header {
+  background: url(/homework/img/apples.jpg) 50% 60% no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #FFF;
+  font-size: 20px;
+}
+header nav {
+  padding: 60px 85px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav a {
+  color: #FFF;
+}
+
+.nav-part2 {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.nav-part1 {
+  letter-spacing: 0.3rem;
+}
+
+.main-text-container, .main-button-container {
+  margin: 12vw auto;
+  text-align: center;
+}
+
+.main-logo-text {
+  font-size: 70px;
+  letter-spacing: 0.3rem;
+}
+
+.large-logo {
+  font-size: 100px;
+}
+
+.main-button {
+  background-color: rgba(0, 0, 0, 0.425);
+  border-color: #FFF;
+  padding: 20px 120px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.info-text-container {
+  display: flex;
+  justify-content: space-around;
+}
+.info-text-container div {
+  width: 700px;
+  padding: 120px 20px;
+}
+
+.medium {
+  font-size: 20px;
+}
+
+.photo-block-item {
+  display: flex;
+  padding: 40px 20px;
+}
+
+.left-item {
+  margin-right: 40px;
+}
+.left-item .photo-block-item-text {
+  order: -1;
+}
+
+.img-contaiter, .photo-block-item-text {
+  align-self: center;
+}
+
+.img-contaiter {
+  position: relative;
+  margin-left: 40px;
+  width: 55%;
+  min-height: 400px;
+  background-image: url(/homework/img/sample.jpg);
+  background-size: cover;
+}
+
+.img-black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.205);
+}
+
+.phototext {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.like {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #FFF;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.418);
+  border: 2px solid #FFF;
+  padding: 10px;
+}
+
+.left-item .img-contaiter {
+  background-image: url(/homework/img/sample1.jpg);
+}
+
+.aut {
+  color: #A4A4A4;
+}
+
+.photo-block-item-text {
+  padding: 0px 0px 0px 50px;
+  width: 40%;
+}
+
+.photo-block-container {
+  text-align: center;
+  background-color: #F0F0F0;
+  padding: 120px 0 60px 0;
+}
+.photo-block-container p {
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.footer-part2-container, .footer-part1-container {
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-part2-container a, .footer-part1-container a {
+  padding-left: 20px;
+  color: #343638;
+}
+.footer-part2-container p, .footer-part1-container p {
+  color: #A4A4A4;
+}
+
+.footer-part1-container div {
+  margin: 100px 0;
+  width: 22%;
+}
+
+#lastTweet {
+  color: #E8E8E8;
+}
+
+.form-container, .small {
+  background-color: white;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 30px;
+}
+.form-container span, .small span {
+  padding: 1px 10px;
+  vertical-align: middle;
+}
+.form-container input, .small input {
+  height: 60px;
+  width: 55%;
+  background-color: #f3f3f3;
+  padding-left: 20px;
+  font-size: 15px;
+}
+.form-container input::placeholder, .small input::placeholder {
+  color: black;
+}
+.form-container button, .small button {
+  margin-left: -10px;
+  color: #FFF;
+  background-color: #000;
+  border: none;
+  font-size: 15px;
+  height: 66px;
+  width: 150px;
+}
+
+.small {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+.small input {
+  height: 30px;
+}
+.small button {
+  margin-left: -10px;
+  color: #FFF;
+  background-color: #000;
+  border: none;
+  font-size: 15px;
+  height: 36px;
+  width: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .nav-part2 {
+    width: 400px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1500px) {
+  .nav-part2 {
+    width: 450px;
+  }
+
+  .main-logo-text {
+    font-size: 60px;
+  }
+
+  .large-logo {
+    font-size: 75px;
+  }
+
+  .main-text-container, .main-button-container {
+    margin: 20vw auto;
+    text-align: center;
+  }
+
+  .form-container input, .small input {
+    height: 50px;
+    width: 20%;
+    padding-left: 20px;
+  }
+  .form-container button, .small button {
+    height: 56px;
+    width: 100px;
+  }
+
+  .footer-item input {
+    margin-left: -20px;
+    height: 30px;
+    width: 100%;
+    padding-left: 5px;
+  }
+  .footer-item button {
+    margin-left: -20px;
+    height: 36px;
+    width: 80px;
+  }
+}

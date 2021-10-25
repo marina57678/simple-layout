@@ -1,0 +1,268 @@
+
+@mixin reset {
+	margin: 0;
+	padding: 0; 
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2) format('woff2');
+}
+
+@mixin flexCont {
+	display: flex;
+	justify-content: space-between;
+}
+@mixin btn {
+	margin-left: -10px;
+	color: $color;
+	background-color: $color5;
+	border: none;
+	font-size: 15px;
+}
+body{
+	@include reset;
+	font-family: 'Open Sans';
+	a{
+		text-decoration: none;
+	}
+	hr{
+		width: 95%;
+		margin: 0 auto;
+		color: $color8;
+	}
+}
+header{
+	background: url(/homework/img/apples.jpg) 50% 60% no-repeat;
+	background-size: cover;
+	height: 100vh;
+	color: $color;
+	font-size: 20px;
+	nav{
+		padding: 60px 85px;
+		@include flexCont;
+		a{
+			color:$color;
+		}
+	}
+}
+.nav-part2{
+	@include flexCont;
+	width: 500px;
+}
+.nav-part1{
+	letter-spacing: 0.3rem;
+}
+.main-text-container,.main-button-container{
+	margin: 12vw auto;
+	text-align: center;
+}
+
+.main-logo-text{
+	font-size: 70px;
+	letter-spacing: 0.3rem;	
+}
+
+.large-logo{
+	font-size: 100px;
+}
+
+.main-button{
+	background-color: rgba(0, 0, 0, 0.425);
+	border-color: $color;
+	padding: 20px 120px;
+	color: $color;
+	font-size: 20px;
+}
+
+.info-text-container{
+	display: flex;
+	justify-content: space-around;
+	div{
+		width: 700px;
+		padding: 120px 20px;
+	}
+}
+
+.medium{
+	font-size: 20px;
+}
+.photo-block-item{
+	display: flex;
+	padding: 40px 20px;
+}
+.left-item{
+	margin-right: 40px;
+	.photo-block-item-text{
+		order: -1;
+	}
+}
+.img-contaiter,.photo-block-item-text{
+	align-self: center;
+}
+.img-contaiter{
+	position: relative;
+	margin-left: 40px;
+	width: 55%;
+	min-height:400px;
+	background-image: url(/homework/img/sample.jpg);
+	background-size: cover;
+}
+.img-black{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.205);
+}
+.phototext{
+	position: absolute;
+	bottom: 20px;
+	left: 30px;
+	color: $color;
+	font-weight: bold;
+}
+.like{
+	position: absolute;
+	top: 20px;
+	right:30px ;
+	color: $color;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.418);
+	border: 2px solid $color;
+	padding:10px;
+}
+.left-item{
+	.img-contaiter{
+		background-image: url(/homework/img/sample1.jpg);
+	}
+}
+.aut{
+	color: $color3;
+}
+.photo-block-item-text{
+	padding: 0px 0px 0px 50px;
+	width:40%;
+}
+.photo-block-container{
+	text-align: center;
+	background-color: $color4;
+	padding: 120px 0 60px 0;
+	p{
+		padding-bottom: 20px;
+		font-size: 30px;
+	}
+}
+
+.footer-part2-container,.footer-part1-container{
+	padding: 25px 50px;
+	@include flexCont;
+	a{
+		padding-left: 20px;
+		color: $color6;
+		
+	}
+	p{
+		color: $color3;
+	}
+}
+.footer-part1-container{
+	div{
+		margin: 100px 0;
+		width: 22%;
+	}
+}
+#lastTweet{
+	color: $color7;
+}
+
+
+.form-container{
+	background-color: white;
+	margin: 0 auto;
+	width: 90%;
+	text-align: center;
+	padding: 50px 0;
+	font-size: $fontSizeBig;
+	span{
+		padding: 1px 10px;
+		vertical-align: middle;
+	}
+	input{
+		height: 60px;
+		width: $widthInputBig;
+		background-color: rgb(243, 243, 243);
+		padding-left: 20px;
+		font-size: 15px;
+		&::placeholder{
+			color: black;
+		}
+	}
+	button{
+		@include btn;
+		height: 66px;
+		width: 150px;
+	}
+}
+.small{
+	@extend .form-container;
+	font-size: $fontSizeSmall;
+	@include reset;
+	input{
+		height: 30px;
+	}
+	button{
+		@include btn;
+		height: 36px;
+		width: 100px;
+	}
+}
+
+@media screen and (max-width: $small) {
+	.nav-part2{
+		width: 400px;
+	}
+}
+
+@media (min-width: $small) and (max-width: $medium) {
+	.nav-part2{
+		width: 450px;
+	}
+	.main-logo-text{
+		font-size: 60px;
+	}
+	.large-logo{
+		font-size: 75px;
+	}
+	.main-text-container, .main-button-container {
+		margin: 20vw auto;
+		text-align: center;
+	}
+	.form-container{
+		input{
+			height: 50px;
+			width: $widthInputSmall;
+			padding-left: 20px;
+		}
+		button{
+			height: 56px;
+			width: 100px;
+		}
+	}
+	.footer-item{
+		input{
+			margin-left: -20px;
+			height: 30px;
+			width: 100%;
+			padding-left: 5px;
+		}
+		button{
+			margin-left: -20px;
+			height: 36px;
+			width: 80px;
+		}
+	}
+}
